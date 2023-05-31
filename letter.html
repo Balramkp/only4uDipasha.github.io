@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="letter.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="card">
+        <p id="transforming-words">My Dear Dipasha,<br/>
+            Jab mene apko pehli baar dekha. Us din he mujhe lg gaya tha ki apme kuch to special hai. Apki smile aur personality se me impress ho gya. Yrr Us din se tere bare me sochne se kud ko rok nahi pa raha...<br/>Hamari jada baat nahi hui lekin. Lekin fir bhi, I felt a connection that i haven't experienced before. aur tera apne kaam ke liye passion and the way you engage in conversation drew me closer to you.<br/>Dipasha, I want u to know that u hold a special place in my heart. And I have a strong feeling for u. Pta h apko, mere sath Haridwar me bs es baar he kuch accha hua h or infact me shyd lucky hu jo me tujhse mile or hamne baat bhi kari. <br/>I understand ki hum ek dusre ko jada nahi jante. Aur ye be ki mene pyar ka izhar bahut jaldi krr diya hai. Lekin mera manna h ki agar apke andar kisi ke liye true feelings hai. Then take a chance and express your true feeling.<br/>Dipasha, ye letter me yeh btane ke liye likh raha hu ki "I LOVE U DIPASHA...". aur mene feelings tere liye likhi hai  sbb sacchi h yrr...<br/>Please take ur time to reflect upon my words and know that whatever decision u make, I wil respect it. If u feel that same way , I would be overjoyed to continue this beautiful journey of love with u. If not, I will always treasure the memory. We have created together once and hold u dear in my heart...
+            <div class="heart-container">
+                <div class="heart"></div>
+                <p>-- Balram</p>
+              </div>         
+        </p>
+    </div>
+    <svg class="filter">
+        <filter id="wavy2">
+            <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="20"></feDisplacementMap>
+        </filter>
+    </svg>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      const paragraph = document.getElementById('transforming-words');
+const words = paragraph.innerText.split(' ');
+
+paragraph.innerHTML = words.map((word, index) => {
+  return `<span style="--index: ${index};">${word}</span>`;
+}).join(' ');
+
+    </script>
+
+</body>
+
+</html>
